@@ -1,0 +1,18 @@
+import * as React from 'react';
+import './Button.css'
+
+interface IOwnProps {
+    variant: string,
+    children: any
+}
+
+type Props = IOwnProps
+
+const Button: React.FC<Props> = (props) => {
+    const {variant, children, ...rest} = props;
+
+    return <button className={`button ${variant}`} {...rest}>{children}</button>
+};
+
+
+export default Button
